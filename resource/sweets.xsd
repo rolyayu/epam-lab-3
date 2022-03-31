@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="sweets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sweet" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="production">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z]{1,4}\s[A-Z]*"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="sweet-type">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="CARAMEL" />
+                                        <xs:enumeration value="IRIS" />
+                                        <xs:enumeration value="CHOCOLATE" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="energy" type="xs:positiveInteger"/>
+                            <xs:element name="ingredients">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingredient" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="ingredient-name">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[A-Z]*"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="weight">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:integer">
+                                                                <xs:minInclusive value="5"/>
+                                                                <xs:maxInclusive value="60"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="chocolate-type" maxOccurs="1" minOccurs="0">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[A-Z]*"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="nutritional-value">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="proteins">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:maxInclusive value="5"/>
+                                                    <xs:minInclusive value="2"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="fats">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                <xs:maxInclusive value="10"/>
+                                                <xs:minInclusive value="4"/>
+                                            </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="carbs">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:maxInclusive value="100"/>
+                                                    <xs:minInclusive value="10"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

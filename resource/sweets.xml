@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<sweets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="sweets.xsd">
+    <sweet id="ID-1">
+        <name>Mars</name>
+        <production>OAO NESTLE</production>
+        <sweet-type>CHOCOLATE</sweet-type>
+        <energy>40</energy>
+        <ingredients>
+            <ingredient>
+                <ingredient-name>CHOCOLATE</ingredient-name>
+                <weight>40</weight>
+                <chocolate-type>MILKY</chocolate-type>
+            </ingredient>
+            <ingredient>
+                <ingredient-name>SUGAR</ingredient-name>
+                <weight>27</weight>
+            </ingredient>
+        </ingredients>
+        <nutritional-value>
+            <proteins>4</proteins>
+            <fats>4</fats>
+            <carbs>12</carbs>
+        </nutritional-value>
+    </sweet>
+    <sweet id="ID-2">
+        <name>Marsianka</name>
+        <production>AO BOLSHEVICHKA</production>
+        <sweet-type>IRIS</sweet-type>
+        <energy>9999</energy>
+        <ingredients>
+            <ingredient>
+                <ingredient-name>WATER</ingredient-name>
+                <weight>20</weight>
+            </ingredient>
+            <ingredient>
+                <ingredient-name>SUGAR</ingredient-name>
+                <weight>5</weight>
+            </ingredient>
+            <ingredient>
+                <ingredient-name>CHOCOLATE</ingredient-name>
+                <weight>54</weight>
+                <chocolate-type>DARK</chocolate-type>
+            </ingredient>
+        </ingredients>
+        <nutritional-value>
+            <proteins>3</proteins>
+            <fats>4</fats>
+            <carbs>34</carbs>
+        </nutritional-value>
+    </sweet>
+    <sweet id="ID-3">
+        <name>Funny Bee</name>
+        <production>OOO BELSELMASH</production>
+        <sweet-type>CARAMEL</sweet-type>
+        <energy>14</energy>
+        <ingredients>
+            <ingredient>
+                <ingredient-name>WATER</ingredient-name>
+                <weight>12</weight>
+            </ingredient>
+            <ingredient>
+                <ingredient-name>VANNILIN</ingredient-name>
+                <weight>12</weight>
+            </ingredient>
+        </ingredients>
+        <nutritional-value>
+            <proteins>3</proteins>
+            <fats>5</fats>
+            <carbs>17</carbs>
+        </nutritional-value>
+    </sweet>
+</sweets>
