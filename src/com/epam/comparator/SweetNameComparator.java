@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class SweetNameComparator implements Comparator<Sweet> {
     @Override
-    public int compare(Sweet o1, Sweet o2) {
-        return o1.getName().compareTo(o2.getName());
+    public int compare(Sweet firstSweet, Sweet secondSweet) {
+        return firstSweet.getName().compareTo(secondSweet.getName());
     }
 }
